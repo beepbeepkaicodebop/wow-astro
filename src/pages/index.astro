@@ -1,5 +1,6 @@
 ---
-import Navigation from '../components/Navigation.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
 const pageTitle = "wow-astro-say-what";
@@ -15,9 +16,11 @@ const pageSubtitle = "a nice name!";
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<Navigation />
+		<Header />
 
 		<h1>{pageTitle}</h1>
 		<h2>{pageSubtitle}</h2>
+
+		<Footer />
 	</body>
 </html>
