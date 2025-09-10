@@ -1,7 +1,5 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 const pageTitle = "wow-astro-say-what";
 const pageSubtitle = "a nice name!";
@@ -16,15 +14,10 @@ const pageSubtitle = "a nice name!";
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<Header />
+		<BaseLayout pageTitle={pageTitle} pageSubtitle={pageSubtitle}>
+			<p>This is the home page of my Astro site!</p>
 
-		<h1>{pageTitle}</h1>
-		<h2>{pageSubtitle}</h2>
-
-		<Footer />
-
-		<script>
-			import "../scripts/menu.js";
-  	</script>
+			<p>Astro is quite a nice name indeed, innit?</p>
+		</BaseLayout>
 	</body>
 </html>
