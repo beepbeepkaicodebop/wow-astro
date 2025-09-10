@@ -46,5 +46,5 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 <hr>
 <br>
 
-### 📝 wow-astroooooaaahhh
+### 📝 wow-astrooooo
 > just following the tutorial on their [docs](https://docs.astro.build/en/tutorial/) to see how it works getting back into what i've apparently forgot _(and have missed on)_ during my hiatus-health-going-cuckoo-thing
