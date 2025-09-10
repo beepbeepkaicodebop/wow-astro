@@ -22,5 +22,11 @@ const pageSubtitle = "a nice name!";
 		<h2>{pageSubtitle}</h2>
 
 		<Footer />
+
+		<script>
+			document.querySelector('.hamburger')?.addEventListener('click', () => {
+				document.querySelector('.nav-links')?.classList.toggle('expanded');
+			});
+  	</script>
 	</body>
 </html>
