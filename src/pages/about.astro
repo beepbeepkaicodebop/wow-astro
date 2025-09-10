@@ -1,8 +1,9 @@
 ---
+import Navigation from '../components/Navigation.astro';
 import '../styles/global.css';
 
 const pageTitle = "wow-astro-say-what";
-const pageHeadingOne = "...about me?";
+const pageSubtitle = "...about me?";
 
 const identity = {
   firstName: "Sarah",
@@ -43,12 +44,11 @@ const textCase = "uppercase";
     </style>
 	</head>
 	<body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
+    <Navigation />
 
-		<h1>{pageTitle} - {pageHeadingOne}</h1>
-		<h2>... and my new Astro site!</h2>
+		<h1>{pageTitle}</h1>
+    <h2>{pageSubtitle}</h2>
+		<h3>... and my new Astro site!</h3>
 
     <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
 
