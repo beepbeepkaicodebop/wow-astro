@@ -19,4 +19,14 @@ _But that's not all!_ You can create dynamic routes with multiple parameters, to
 
 > You can read more about dynamic page routing in the [Astro documentation](https://docs.astro.build/en/core-concepts/routing/#dynamic-routes).
 
+### Use props in dynamic routes
+Use `import.meta.glob()` to import all of your blog posts, and then pass them as props to your dynamic route pages. 
+
+You can then filter the list of posts, using Astro's built-in TypeScript support, based on the route parameters (e.g., the tag name), and display only the posts that match the current route (i.e., the tag specified in the URL).
+
+### Wrapping up
+If you *need information to construct the page routes*, write it _inside_ `getStaticPaths()`.
+
+To *receive information in the HTML template of a page route*, write it _outside_ `getStaticPaths()`.
+
 Be back soon with more adventures across the Astro and beyond!
