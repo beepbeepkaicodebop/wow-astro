@@ -5,11 +5,12 @@ const allPosts = Object.values(
   import.meta.glob('./posts/*.md', { eager: true })
 );
 
-const pageTitle = "wow-astro-say-what-about-what";
-const pageSubtitle = "AKA My Astro Learning Blog!";
+const pageTitle = "wow-astro-say-what-";
+const pageSubtitle = "about-what?!";
 ---
 
 <BaseLayout pageTitle={pageTitle} pageSubtitle={pageSubtitle}>
+  <h3>AKA My Astro Learning Blog!</h3>
   <p>This is where I will post about my journey learning Astro.</p>
 
   <ul>
