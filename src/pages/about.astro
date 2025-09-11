@@ -33,6 +33,18 @@ const fontWeight = "bold";
 const textCase = "uppercase";
 ---
 
+<style is:global define:vars={{ skillColor, fontWeight, textCase }}>
+  h1 {
+    color: #8f108f;
+    font-size: 4rem;
+  }
+  .skill {
+    color: var(--skillColor);
+    font-weight: var(--fontWeight);
+    text-transform: var(--textCase);
+  }
+</style>
+
 <BaseLayout pageTitle={pageTitle} pageSubtitle={pageSubtitle}>
   <h3>...and my new Astro site!</h3>
 
@@ -87,16 +99,3 @@ const textCase = "uppercase";
       <p>My goal is not 3 days.</p>
   }
 </BaseLayout>
-
-<style is:global define:vars={{ skillColor, fontWeight, textCase }}>
-  h1 {
-    color: rgb(143, 16, 143);
-    font-size: 4rem;
-  }
-
-  .skill {
-    color: var(--skillColor);
-    font-weight: var(--fontWeight);
-    text-transform: var(--textCase);  
-  }
-</style>
