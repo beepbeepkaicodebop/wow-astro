@@ -1,16 +1,51 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Greeting from '../components/Greeting';
+import type { loadRenderers } from 'astro:container';
 
 const pageTitle = "wow-astro-say-what-";
 const pageSubtitle = "a-nice-name!";
 ---
 
 <BaseLayout pageTitle={pageTitle} pageSubtitle={pageSubtitle}>
-	<p>
-		This is the home page of my Astro site!
-	</p>
+	<!-- 
+		By using the Greeting component without the client:load directive, it will be rendered on the server, making it a non-hydrated component, AKA this is an example of a server-side rendering component, and the button will not work therefore it makes the component interactive:
+
+		<Greeting
+			messages={
+				["Hi", "Hello", "Howdy", "Hey there", "Oi"]
+			}
+		/>
+	-->
+
+	<!-- 
+		By using the Greeting component with the client:load directive, it will be rendered on the client, making it a hydrated component, and the button will work immediately AKA this an example of a client-side rendering component.
+		The button of the following component works because the client:load directive tells Astro to send and rerun its JavaScript on the client when the page loads, making the component interactive. This is called a hydrated component: 
+	-->
+	<Greeting
+		client:load
+		messages={
+			[
+				"Hi", 
+				"Hello", 
+				"Howdy", 
+				"Hey there", 
+				"Oi", 
+				"Hej", 
+				"Hallo", 
+				"Hola", 
+				"Habari"
+			]
+		}
+	/>
+
+	<!--
+		In what ways will these components be the same? In what way(s) will they be different?
+
+		- Same: They both show the same HTML elements and look the same initially. - Different: The component with the client:load directive will rerender after the page is loaded, and any interactive elements that it has will work.
+	-->
 
 	<p>
-		Astro is quite a nice name indeed, innit?
+		This is the home page of my Astro site! Astro is quite a nice name indeed, innit?
 	</p>
 </BaseLayout>
