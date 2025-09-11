@@ -1,6 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
+const allPosts = Object.values(
+  import.meta.glob(
+    './posts/*.md', 
+    { eager: true }
+  )
+);
 
 const pageTitle = "wow-astro-say-what-about-what";
 const pageSubtitle = "AKA My Astro Learning Blog!";
