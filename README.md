@@ -1,4 +1,13 @@
-# Astro Starter Kit: Minimal
+# wow-astro v1.0: [Astro Blog Tutorial](https://docs.astro.build/en/tutorials/blog/)
+> just following the tutorial on their [docs](https://docs.astro.build/en/tutorial/) to see how it works getting back into what i've apparently forgot _(and have missed on)_ during my hiatus-health-going-cuckoo-thing.
+
+This version includes the steps up until unit 6, apart from the last section, the optional one.
+
+<br>
+<hr>
+<br>
+
+## Astro Starter Kit: Minimal
 
 ```sh
 npm create astro@latest -- --template minimal
@@ -6,7 +15,7 @@ npm create astro@latest -- --template minimal
 
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-## 🚀 Project Structure
+### 🚀 Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
 
@@ -25,7 +34,7 @@ There's nothing special about `src/components/`, but that's where we like to put
 
 Any static assets, like images, can be placed in the `public/` directory.
 
-## 🧞 Commands
+### 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
 
@@ -38,13 +47,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+### 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-<br>
-<hr>
-<br>
-
-### 📝 wow-astrooooo
-> just following the tutorial on their [docs](https://docs.astro.build/en/tutorial/) to see how it works getting back into what i've apparently forgot _(and have missed on)_ during my hiatus-health-going-cuckoo-thing
