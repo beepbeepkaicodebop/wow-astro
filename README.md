@@ -1,4 +1,4 @@
-# wow-astro v1.0: [Astro Blog Tutorial](https://docs.astro.build/en/tutorials/blog/)
+# wow-astro v1.1: [Astro Blog Tutorial](https://docs.astro.build/en/tutorials/blog/)
 > just following the tutorial on their [docs](https://docs.astro.build/en/tutorial/) to see how it works getting back into what i've apparently forgot _(and have missed on)_ during my hiatus-health-going-cuckoo-thing
 
 
@@ -49,6 +49,7 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
+
 
 ### 👀 Want to learn more?
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
