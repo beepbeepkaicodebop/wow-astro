@@ -24,6 +24,8 @@ Use `import.meta.glob()` to import all of your blog posts, and then pass them as
 
 You can then filter the list of posts, using Astro's built-in TypeScript support, based on the route parameters (e.g., the tag name), and display only the posts that match the current route (i.e., the tag specified in the URL).
 
+A `getStaticPaths` function should **always return a list of objects containing** `params` *(what to call each page route)* and ***optionally any*** `props` *(data that you want to pass to those pages)*. 
+
 ### Wrapping up
 If you *need information to construct the page routes*, write it _inside_ `getStaticPaths()`.
 

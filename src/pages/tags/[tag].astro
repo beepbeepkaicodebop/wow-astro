@@ -7,6 +7,25 @@ export async function getStaticPaths() {
     import.meta.glob('../posts/*.md', { eager: true })
   );
 
+  // generate pages from existing tags using js instead of manually adding each new tag
+  const uniqueTags = [
+    ...new Set(
+      allPosts.map((post: any) => 
+      post.frontmatter.tags).flat()
+    )
+  ];
+
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts
+      .filter((post: any) => post.frontmatter.tags.includes(tag));
+    return {
+      params: { tag },
+      props: { posts: filteredPosts },
+    };
+  });
+
+  // previous code: example of manually adding each new tag
+  /*
   return [
     {
       params: {tag: "astro"}, 
@@ -33,14 +52,11 @@ export async function getStaticPaths() {
       props: {posts: allPosts}
     }
   ];
-}
+  */
+};
 
 const { tag } = Astro.params;
 const { posts } = Astro.props;
-
-const filteredPosts = posts.filter((post: any) => 
-  post.frontmatter.tags?.includes(tag)
-);
 ---
 <BaseLayout pageTitle={tag}>
   <p>
@@ -49,7 +65,7 @@ const filteredPosts = posts.filter((post: any) =>
 
   <ul>
     {
-      filteredPosts.map((post: any) => 
+      posts.map((post: any) => 
         <BlogPost 
           url={post.url} 
           title={post.frontmatter.title}
