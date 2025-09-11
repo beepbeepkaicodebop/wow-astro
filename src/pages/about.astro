@@ -1,8 +1,11 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 const pageTitle = "wow-astro-say-what-";
 const pageSubtitle = "about-me?!";
+const happy = true;
+const finished = true;
+const goal = 3;
 
 const identity = {
   firstName: "Sarah",
@@ -17,23 +20,19 @@ const identity = {
 
 const skills = [
   "HTML", 
-  "CSS", 
+  "CSS",
   "JavaScript", 
   "React", 
   "Astro", 
   "Writing Docs"
 ];
 
-const happy = true;
-const finished = true;
-const goal = 3;
-
 const skillColor = "crimson";
 const fontWeight = "bold";
 const textCase = "uppercase";
 ---
 
-<style is:global define:vars={{ skillColor, fontWeight, textCase }}>
+<style define:vars={{ skillColor, fontWeight, textCase }}>
   h1 {
     color: #8f108f;
     font-size: 4rem;
@@ -77,6 +76,7 @@ const textCase = "uppercase";
   <p>
     My skills are:
   </p>
+  <p></p>
   <ul>
     {
       skills.map((skill) => 
@@ -86,16 +86,4 @@ const textCase = "uppercase";
       )
     }
   </ul>
-
-  {happy && <p>I am happy to be learning Astro!</p>}
-
-  {finished && <p>I finished this tutorial!</p>}
-
-  {
-    goal === 3 
-    ? 
-      <p>My goal is to finish in 3 days.</p> 
-    : 
-      <p>My goal is not 3 days.</p>
-  }
 </BaseLayout>
