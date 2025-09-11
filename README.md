@@ -1,4 +1,4 @@
-# wow-astro v1.5: [Astro Blog Tutorial](https://docs.astro.build/en/tutorials/blog/)
+# wow-astro v1.1: [Astro Blog Tutorial](https://docs.astro.build/en/tutorials/blog/)
 > just following the tutorial on their [docs](https://docs.astro.build/en/tutorial/) to see how it works getting back into what i've apparently forgot _(and have missed on)_ during my hiatus-health-going-cuckoo-thing
 
 
