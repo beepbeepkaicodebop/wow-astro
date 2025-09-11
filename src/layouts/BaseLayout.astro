@@ -17,6 +17,7 @@ const textCase = "uppercase";
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
+
     <style is:global define:vars={{ skillColor, fontWeight, textCase }}>
       h1 {
         color: purple;
@@ -29,12 +30,17 @@ const textCase = "uppercase";
         text-transform: var(--textCase);  
       }
     </style>
+
 	</head>
 	<body>
 		<Header />
 
-		<h1>{pageTitle}</h1>
-		<h2>{pageSubtitle}</h2>
+		<h1>
+      {pageTitle}
+    </h1>
+		<h2>
+      {pageSubtitle}
+    </h2>
 
     <slot />
 
