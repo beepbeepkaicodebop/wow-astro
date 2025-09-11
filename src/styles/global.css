@@ -22,12 +22,13 @@ h1 {
 
 /* nav styles */
 
-.hamburger {
+.menu {
   padding-right: 20px;
-  cursor: pointer;
+  background: transparent;
+  border: none;
 }
 
-.hamburger .line {
+.menu .line {
   display: block;
   width: 40px;
   height: 5px;
@@ -35,10 +36,18 @@ h1 {
   background-color: #ff9776;
 }
 
+.nav {
+  display: flex;
+  align-items: self-start;
+  justify-content: space-between;
+}
+
+.nav button {
+  cursor: pointer;
+}
+
 .nav-links {
   width: 100%;
-  top: 5rem;
-  left: 48px;
   background-color: #ff9776;
   display: none;
   margin: 0;
@@ -59,17 +68,17 @@ h1 {
   background-color: #ff9776;
 }
 
-.expanded {
+.menu[aria-expanded="true"] ~ .nav-links {
   display: unset;
 }
 
-.nav {
-  display: flex;
-  align-items: self-start;
-  justify-content: space-between;
-}
-
 @media screen and (min-width: 636px) {
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   .nav-links {
     display: block;
     position: static;
@@ -82,14 +91,8 @@ h1 {
     padding: 15px 20px;
   }
 
-  .hamburger {
+  .menu {
     display: none;
-  }
-
-  .nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
   }
 }
 
@@ -100,4 +103,13 @@ html.dark {
 
 .dark .nav-links a {
   color: #fff;
+}
+
+.dark a {
+  color: #ff9776;
+}
+
+.dark .nav-links a:hover,
+.dark .nav-links a:focus {
+  color: #0d0950;
 }
