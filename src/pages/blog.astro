@@ -2,6 +2,13 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogPost from '../components/BlogPost.astro';
 
+/*
+  The import.meta.glob function is a special Astro feature that allows you to import multiple files at once using a glob pattern. The { eager: true } option tells Astro to load the files immediately instead of lazily loading them when they are needed. This is useful for static site generation where you want to have all the data available at build time.
+
+  Object.values() returns an array of values of the enumerable own properties of an object. @param o — Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+
+  In this case, import.meta.glob is used to import all Markdown files in the ./posts/ directory, and Object.values is used to convert the resulting object into an array of post data that can be easily iterated over in the component.
+*/
 const allPosts = Object.values(
   import.meta.glob('./posts/*.md', { eager: true })
 );

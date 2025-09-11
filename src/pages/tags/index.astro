@@ -7,13 +7,13 @@ const allPosts = Object.values(
 )
 
 /*
-gets unique tags from all posts by:
-1. mapping over the posts list (an array) from import.meta.glob, and extracting their tags, flattening the resulting array of arrays into a single array:
-- "It goes through each Markdown post, one by one, and combines each array of tags into one single larger array"
-2. creating a Set to filter out duplicates:
-- "Then, it makes a new Set from all the individual tags it found (to ignore repeated values)." 
-3. turning this Set into an array as the final result:
-- "Finally, it turns that set into an array (with no duplications), that you can use to show a list of tags on your page."
+  gets unique tags from all posts by:
+    1. mapping over the posts list (an array) from import.meta.glob, and extracting their tags, flattening the resulting array of arrays into a single array:
+  - "It goes through each Markdown post, one by one, and combines each array of tags into one single larger array"
+    2. creating a Set to filter out duplicates:
+  - "Then, it makes a new Set from all the individual tags it found (to ignore repeated values)." 
+    3. turning this Set into an array as the final result:
+  - "Finally, it turns that set into an array (with no duplications), that you can use to show a list of tags on your page."
 */
 const tags = [
   ...new Set(
