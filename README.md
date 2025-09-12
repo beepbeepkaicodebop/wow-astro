@@ -1,8 +1,8 @@
-# wow-astro v1.1: [Astro Blog Tutorial](https://docs.astro.build/en/tutorials/blog/)
+# wow-astro v1.2: [Astro Blog Tutorial](https://docs.astro.build/en/tutorials/blog/)
 > just following the tutorial on their [docs](https://docs.astro.build/en/tutorial/) to see how it works getting back into what i've apparently forgot _(and have missed on)_ during my hiatus-health-going-cuckoo-thing
 
 
-This version includes the steps up until unit 6, apart from the last section, the optional one, and all the improvements from the [community PR regarding accessibility](https://github.com/withastro/blog-tutorial-demo/pull/44), opened and worked on by [@bjohansebas](https://github.com/bjohansebas). 
+This version includes the optional chapter regarding [Content Collections](https://docs.astro.build/en/tutorial/6-islands/4/) and all the improvements from the [community PR regarding accessibility](https://github.com/withastro/blog-tutorial-demo/pull/44), opened and worked on by [@bjohansebas](https://github.com/bjohansebas). 
 
 Thank you for such a superb contribution, by the way! Looking forward to the next steps and learning more from the lots of you! I will try my best to keep this repo up to date with the tutorial and any other improvements I might find along the way.
 
